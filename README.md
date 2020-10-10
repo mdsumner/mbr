@@ -1,33 +1,25 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
 
 # mbr
 
 <!-- badges: start -->
-[![R build status](https://github.com/mdsumner/mbr/workflows/R-CMD-check/badge.svg)](https://github.com/mdsumner/mbr/actions)
+
+[![R build
+status](https://github.com/mdsumner/mbr/workflows/R-CMD-check/badge.svg)](https://github.com/mdsumner/mbr/actions)
 <!-- badges: end -->
 
-The goal of mbr is to compute the minimum bounding rectangle of a set of points. 
+The goal of mbr is to compute the minimum bounding rectangle of a set of
+points.
 
-Provided as an answer to a question on this site, by Bill Huber on 2012-04-05
+Provided as an answer to a question on this site, by Bill Huber on
+2012-04-05
 
-https://gis.stackexchange.com/questions/22895/finding-minimum-area-rectangle-for-given-points/22934?stw=2#22934
+<https://gis.stackexchange.com/questions/22895/finding-minimum-area-rectangle-for-given-points/22934?stw=2#22934>
 
 Here is an example of its use:
 
-```{r mbr}  
+``` r
 library(mbr)
   # Create sample data
   set.seed(23)
@@ -43,8 +35,9 @@ plot(p[(function(x) c(x, x[1]))(chull(p)), ],
      xlim=limits[,1], ylim=limits[,2])                # The hull
 lines(mbr, col="Blue", lwd=3)                         # The MBR
 points(p, pch=19)    
-
 ```
+
+<img src="man/figures/README-mbr-1.png" width="100%" />
 
 ## Installation
 
@@ -54,7 +47,8 @@ You can install with
 remotes::install_github("mdsumner/mbr"
 ```
 
-
 ## Code of Conduct
-  
-Please note that the mbr project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+
+Please note that the mbr project is released with a [Contributor Code of
+Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
