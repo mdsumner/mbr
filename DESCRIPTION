@@ -13,3 +13,5 @@ Suggests:
     testthat
 Imports: 
     grDevices
+URL: https://github.com/mdsumner/mbr
+BugReports: https://github.com/mdsumner/mbr/issues
