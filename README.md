@@ -47,6 +47,10 @@ You can install with
 remotes::install_github("mdsumner/mbr"
 ```
 
+## sf
+
+For an sf wrapper see <https://github.com/mdsumner/mbr/issues/1>
+
 ## Code of Conduct
 
 Please note that the mbr project is released with a [Contributor Code of

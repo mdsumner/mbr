@@ -14,6 +14,7 @@
 #'
 #' `MBR()` is an alias of `mbr()`.
 #'
+#' For an sf wrapper see https://github.com/mdsumner/mbr/issues/1
 #' @author Bill Huber
 #' @references
 #' https://gis.stackexchange.com/questions/22895/finding-minimum-area-rectangle-for-given-points/22934?stw=2#22934

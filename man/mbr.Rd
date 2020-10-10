@@ -30,6 +30,8 @@ Most convex hull algorithms are asymptotically O(n*log(n)) for n points: you
 can compute almost as fast as you can read the coordinates.
 
 \code{MBR()} is an alias of \code{mbr()}.
+
+For an sf wrapper see https://github.com/mdsumner/mbr/issues/1
 }
 \examples{
 xy <- quakes[, 1:2]
