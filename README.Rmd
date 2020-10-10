@@ -1,0 +1,59 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# mbr
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of mbr is to compute the minimum bounding rectangle of a set of points. 
+
+Provided as an answer to a question on this site, by Bill Huber on 2012-04-05
+
+https://gis.stackexchange.com/questions/22895/finding-minimum-area-rectangle-for-given-points/22934?stw=2#22934
+
+Here is an example of its use:
+
+```{r mbr}  
+library(mbr)
+  # Create sample data
+  set.seed(23)
+p <- matrix(rnorm(20*2), ncol=2)                 # Random (normally distributed) points
+mbr <- MBR(p)
+
+# Plot the hull, the MBR, and the points
+limits <- apply(mbr, 2, range) # Plotting limits
+plot(p[(function(x) c(x, x[1]))(chull(p)), ], 
+     type="l", asp=1, bty="n", xaxt="n", yaxt="n",
+     col="Gray", pch=20, 
+     xlab="", ylab="",
+     xlim=limits[,1], ylim=limits[,2])                # The hull
+lines(mbr, col="Blue", lwd=3)                         # The MBR
+points(p, pch=19)    
+
+```
+
+## Installation
+
+You can install with
+
+``` r
+remotes::install_github("mdsumner/mbr"
+```
+
+
+## Code of Conduct
+  
+Please note that the mbr project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
